@@ -1,0 +1,14 @@
+
+material OperatingGroundPlane/Image
+        {
+          technique
+          {
+            pass
+            { 
+              texture_unit
+              {
+                texture piso_condutivo.png
+              }
+            }
+          }
+        }

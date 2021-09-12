@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="anestesia_table">
+    <static>true</static>
+    <link name="table">
+      <inertial>
+        <!--pose>0 0 -0.58 0 0 0</pose-->
+        <mass>20</mass>
+      </inertial>
+      <collision name="collision_table">
+        <geometry>
+          <mesh>
+            <uri>model://maq_anestesia/meshes/maq_anestesia.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <surface>
+        </surface>
+      </collision>
+      <visual name="visual_table">
+        <geometry>
+          <mesh>
+            <uri>model://maq_anestesia/meshes/maq_anestesia.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+          </script>
+        </material>
+      </visual>
+    </link>
+      
+  </model>
+</sdf>

@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.5">
+	<world name="default">
+		<!-- A global light source -->
+		<!--include>
+			<uri>model://sun</uri>
+		</include-->
+
+		<scene>
+			<ambient>0.4 0.4 0.4 1</ambient>
+			<background>0.25 0.25 0.25 1</background>
+			<shadows>false</shadows>
+		</scene>
+		<light type="directional" name="some_light">
+			<diffuse>0.6 0.6 0.6 0</diffuse>
+			<specular>1 1 1 0</specular>
+			<direction>-1 -1 -1</direction>
+		</light>
+
+		<!-- A ground plane -->
+		<include>
+			<uri>model://operating_ground_plane</uri>
+		</include>
+
+		<include>
+			<uri>model://Walls</uri>
+		</include>
+
+        <!-- maca com uma esfera -->
+		<include>
+			<pose>-0.1 0.5 0 1.57 0 1.57</pose>
+			<uri>model://operating_table</uri>
+			<name>operating_table</name>
+		</include>
+
+		<!-- suporte para o robo -->
+		<include>
+			<pose>0.4 0 0 -1.57 0 0</pose>
+			<uri>model://modulo</uri>
+			<name>modulo</name>
+		</include>
+
+		<!-- manequins em volta da maca-->
+		<include>
+			<uri>model://manequins</uri>
+			<name>manequins</name>
+		</include>
+
+		<!-- Mesa de anestesia -->
+		<include>
+			<pose>-1.5 1.5 0 0 0 0</pose>
+			<uri>model://maq_anestesia</uri>
+			<name>maq_anestesia</name>
+		</include>
+        
+	</world>
+</sdf>

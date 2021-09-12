@@ -1,0 +1,179 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="manequins">
+    <static>true</static>
+    <link name="manequim_1">
+      <pose frame="1">-1.2 3 0 0 0 -3.14</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>70</mass>
+      </inertial>
+      <collision name="collision_1">
+        <geometry>
+          <mesh>
+            <uri>model://manequins/meshes/manequim1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual_1">
+        <geometry>
+          <mesh>
+            <uri>model://manequins/meshes/manequim1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <pose frame="1">0 0 0 0 0 0</pose>
+        <material>
+          <script>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="manequim_2">
+      <pose frame="2">-0.2 3 0 0 0 3.14</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>70</mass>
+      </inertial>
+      <collision name="collision_2">
+        <geometry>
+          <mesh>
+            <uri>model://manequins/meshes/manequim2.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual_2">
+        <geometry>
+          <mesh>
+            <uri>model://manequins/meshes/manequim2.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <pose frame="2">0 0 0 0 0 0</pose>
+        <material>
+          <script>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="manequim_3">
+      <pose frame="3">1.2 2.2 0 0 0 1.57</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>70</mass>
+      </inertial>
+      <collision name="collision_3">
+        <geometry>
+          <mesh>
+            <uri>model://manequins/meshes/manequim3.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual_3">
+        <geometry>
+          <mesh>
+            <uri>model://manequins/meshes/manequim3.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <pose frame="3">0 0 0 0 0 0</pose>
+        <material>
+          <script>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="manequim_4">
+      <pose frame="4">-1 1.4 0 0 0 -2.5</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>70</mass>
+      </inertial>
+      <collision name="collision_4">
+        <geometry>
+          <mesh>
+            <uri>model://manequins/meshes/manequim4.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual_4">
+        <geometry>
+          <mesh>
+            <uri>model://manequins/meshes/manequim4.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <pose frame="4">0 0 0 0 0 0</pose>
+        <material>
+          <script>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="manequim_5">
+      <pose frame="5">1.4 1.5 0 0 0 1.57</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>70</mass>
+      </inertial>
+      <collision name="collision_5">
+        <geometry>
+          <mesh>
+            <uri>model://manequins/meshes/manequim5.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual_5">
+        <geometry>
+          <mesh>
+            <uri>model://manequins/meshes/manequim5.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <pose frame="5">0 0 0 0 0 0</pose>
+        <material>
+          <script>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="manequim_6">
+      <pose frame="6">0.9 0.4 0 0 0 0.8</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>70</mass>
+      </inertial>
+      <collision name="collision_5">
+        <geometry>
+          <mesh>
+            <uri>model://manequins/meshes/manequim5.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual_6">
+        <geometry>
+          <mesh>
+            <uri>model://manequins/meshes/manequim6.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <pose frame="6">0 0 0 0 0 0</pose>
+        <material>
+          <script>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
