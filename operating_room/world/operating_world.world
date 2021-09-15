@@ -34,7 +34,7 @@
 			<name>operating_table</name>
 		</include>
 
-		<!-- suporte para o robo -->
+		< suporte para o robo>
 		<include>
 			<pose>0.4 0 0 -1.57 0 0</pose>
 			<uri>model://modulo</uri>

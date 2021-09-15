@@ -10,18 +10,20 @@
   <arg name="robot_name" default="iiwa"/>
   <arg name="model" default="iiwa14"/>
   <arg name="trajectory" default="true"/>
+  <arg name="tool" default="gripper"/>
 
   <include file="$(find iiwa_gazebo_surgery)/launch/iiwa_gazebo.launch">
     <arg name="hardware_interface" value="$(arg hardware_interface)" />
     <arg name="robot_name" value="$(arg robot_name)" />
     <arg name="model" value="$(arg model)" />
     <arg name="trajectory" value="$(arg trajectory)" />
+    <arg name="tool" default="$(arg tool)"/>
   </include>
 
   <include file="$(find iiwa_control)/launch/iiwa_sunrise.launch">
     <param name="hardware_interface" value="$(arg hardware_interface)"/>
     <param name="robot_name" value="$(arg robot_name)"/>
     <param name="model" value="$(arg model)"/>
-    <param name="tool_length" value="0.1275"/> <!-- Ver se isso está surtindo efeito -->
+    <param name="tool_length" value="0.2"/> <!-- Ver se isso está surtindo efeito -->
   </include>
 </launch>

@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: iiwa_gripper_description
+    relative_path: urdf/iiwa_gripper.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/iiwa14_gripper.srdf
+  CONFIG:
+    author_name: Lincoln Boer
+    author_email: lincoln.boer@usp.br
+    generated_timestamp: 1631629550

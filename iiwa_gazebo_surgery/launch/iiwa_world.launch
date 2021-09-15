@@ -12,6 +12,7 @@
     <arg name="hardware_interface" default="PositionJointInterface"/>
     <arg name="robot_name" default="iiwa" />
     <arg name="model" default="iiwa14"/>
+    <arg name="tool" default=""/>
     
     <arg name="pi" default="3.141592"/>
     <arg name="initial_angle_6" default="$(eval 90*arg('pi')/180)"/> <!--Initial angle in radians -->
@@ -28,7 +29,8 @@
     </include>
     
     <!-- Load the URDF with the given hardware interface into the ROS Parameter Server -->
-    <include file="$(find iiwa_description)/launch/$(arg model)_upload.launch">
+    <!--include file="$(eval find('iiwa_' + arg(tool) + '_description'))/launch/$(arg model)_$(arg tool)_upload.launch"-->
+    <include file="$(find iiwa_gripper_description)/launch/$(arg model)_gripper_upload.launch">
         <arg name="hardware_interface" value="$(arg hardware_interface)"/>
         <arg name="robot_name" value="$(arg robot_name)" />
         <arg name="origin_xyz" value="'0.2 0 1.0'" /> <!--setting base position-->
