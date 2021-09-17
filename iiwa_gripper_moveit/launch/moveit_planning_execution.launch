@@ -5,7 +5,7 @@
     
     <!-- | 		PARAMETERS  		| -->
     <!-- the "sim" argument controls whether we connect to a Simulated or Real robot. -->
-    <arg name="sim" default="true" doc="If true, the robot will be simulated in Gazebo" />
+    <arg name="sim" default="false" doc="If true, the robot will be simulated in Gazebo" />
     <!-- hardware_interface to use : PositionJointInterface, EffortJointInterface, VelocityJointInterface. -->
     <arg name="hardware_interface" default="PositionJointInterface"/>
     <!-- The is gonna have its nodes/topics under a namespace with the same name. -->
@@ -19,7 +19,9 @@
     
     <remap from="/$(arg hardware_interface)_trajectory_controller/follow_joint_trajectory" 
            to="/$(arg robot_name)/$(arg hardware_interface)_trajectory_controller/follow_joint_trajectory" />
-    <remap from="robot_description" to="/$(arg robot_name)/robot_description" /> 
+    <remap from="robot_description" to="/$(arg robot_name)/robot_description" />
+    <remap from="robot_description_semantic" 
+           to="/$(arg robot_name)/robot_description_semantic" /> 
     <remap from="/get_planning_scene" to="/$(arg robot_name)/get_planning_scene" /> 
     
     <!-- Run the robot within a Gazebo simulation. -->
