@@ -19,9 +19,9 @@ def go_to_pose(head_basis):
     world_basis.position.z += 0.0
 
     # Pose Orientation
-    roll_angle = 0.8
-    pitch_angle = 0.8
-    yaw_angle = 0.8
+    roll_angle = 0.0
+    pitch_angle = 0.0
+    yaw_angle = 0.0
     quaternion = quaternion_from_euler(roll_angle, pitch_angle, yaw_angle)
 
     world_basis.orientation.x = quaternion[0]
@@ -47,9 +47,9 @@ def go_to_pose(head_basis):
     
     group.execute(plan, wait=True)
     # Calling `stop()` ensures that there is no residual movement
-    #group.stop()
+    group.stop()
     # It is always good to clear your targets after planning with poses
-    #group.clear_pose_targets()
+    group.clear_pose_targets()
 
 if __name__ == "__main__":
     ## First initialize `moveit_commander`_ and a `rospy`_ node:
