@@ -34,27 +34,5 @@
         </material>
       </visual>
     </link>
-      
-    <model name="operating_head">
-      <pose frame=''>0.3 0.74 0.31 0 0 0</pose>
-      <link name="head">
-        <pose>0 0.09 0 0 0 0</pose>
-        <collision name="collision_head">
-          <geometry>
-            <sphere>
-              <radius>0.09</radius>
-            </sphere>
-          </geometry>
-        </collision>
-        <visual name="visual_head">
-          <geometry>
-            <sphere>
-              <radius>0.09</radius>
-            </sphere>
-          </geometry>
-        </visual>
-      </link>
-    </model>
-
   </model>
 </sdf>

@@ -1,14 +1,20 @@
 <?xml version="1.0"?>
 <launch>
     <arg name="topic_name" default="/HeadCoordinates"/>
-    <arg name="position_x" default="-0.5"/>
-    <arg name="position_y" default="0.3"/>
-    <arg name="position_z" default="0.2"/>
-    <arg name="orientation_w" default="1.0"/>
-    <node pkg="rostopic" type="rostopic" name="head_coord_node" output="screen" 
+    <arg name="position_x" default="0.25"/>
+    <arg name="position_y" default="0.7"/>
+    <arg name="position_z" default="1.0"/>
+    <arg name="orientation_w" default="0.0"/>
+    <!--node pkg="rostopic" type="rostopic" name="head_coord_node" output="screen" 
     args="pub $(arg topic_name) geometry_msgs/PoseStamped 
     '{header: {stamp: now, frame_id: ''}, 
-    pose: {position: {x: $(arg position_x), y: $(arg position_y), z: $(arg position_z)}, orientation: {x: -1.57, y: -1.57, w: $(arg orientation_w)}}}'"/>
+    pose: {position: {x: $(arg position_x), y: $(arg position_y), z: $(arg position_z)},
+    orientation: {x: -1.57, y: -1.57, w: $(arg orientation_w)}}}'"/-->
+    <node pkg="rostopic" type="rostopic" name="head_coord_node" output="screen" 
+    args="pub $(arg topic_name) geometry_msgs/Pose 
+    '{position: {x: $(arg position_x), y: $(arg position_y), z: $(arg position_z)},
+    orientation: {x: 0.0, y: 0.0, z: 0.0, w: $(arg orientation_w)}}'"/>
+
 </launch>
 
 <!-- '{pose: {position: {x:0.1, y:0.7, z:0.6}}}'-->

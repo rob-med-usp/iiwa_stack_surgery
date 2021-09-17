@@ -27,11 +27,17 @@
 			<uri>model://Walls</uri>
 		</include>
 
-        <!-- maca com uma esfera -->
+        <!-- maca -->
 		<include>
 			<pose>-0.1 0.5 0 1.57 0 1.57</pose>
 			<uri>model://operating_table</uri>
 			<name>operating_table</name>
+		</include>
+
+		<!-- cabeça (esfera) em cima da maca -->
+		<include>
+			<uri>model://head</uri>
+			<name>head</name>
 		</include>
 
 		< suporte para o robo>
