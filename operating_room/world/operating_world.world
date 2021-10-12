@@ -29,7 +29,7 @@
 
         <!-- maca -->
 		<include>
-			<pose>-0.1 0.5 0 1.57 0 1.57</pose>
+			<pose>-0.1 0.4 0 1.57 0 1.57</pose>
 			<uri>model://operating_table</uri>
 			<name>operating_table</name>
 		</include>
@@ -40,7 +40,14 @@
 			<name>head</name>
 		</include>
 
-		< suporte para o robo>
+		<!-- manequim deitado -->
+		<!-- <include>
+			<pose>0.43 1.78 0.73 0 0 3.14</pose>
+			<uri>model://patient</uri>
+			<name>patient</name>
+		</include> -->
+
+		<!-- suporte para o robo -->
 		<include>
 			<pose>0.4 0 0 -1.57 0 0</pose>
 			<uri>model://modulo</uri>

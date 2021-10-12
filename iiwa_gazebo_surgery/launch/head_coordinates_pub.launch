@@ -1,20 +1,22 @@
 <?xml version="1.0"?>
 <launch>
     <arg name="topic_name" default="/HeadCoordinates"/>
-    <arg name="position_x" default="0.35"/>
-    <arg name="position_y" default="0.65"/>
-    <arg name="position_z" default="1.1"/>
-    <arg name="orientation_w" default="0.0"/>
+    <arg name="position_x" default="0.2"/>
+    <arg name="position_y" default="0.8"/>
+    <arg name="position_z" default="0.8"/>
+    <arg name="euler_x" default="-2.14"/>
+    <arg name="euler_y" default="0"/>
+    <arg name="euler_z" default="0"/>
     <!--node pkg="rostopic" type="rostopic" name="head_coord_node" output="screen" 
     args="pub $(arg topic_name) geometry_msgs/PoseStamped 
     '{header: {stamp: now, frame_id: ''}, 
     pose: {position: {x: $(arg position_x), y: $(arg position_y), z: $(arg position_z)},
     orientation: {x: -1.57, y: -1.57, w: $(arg orientation_w)}}}'"/-->
     <node pkg="rostopic" type="rostopic" name="head_coord_node" output="screen" 
-    args="pub $(arg topic_name) geometry_msgs/Pose 
-    '{position: {x: $(arg position_x), y: $(arg position_y), z: $(arg position_z)},
-    orientation: {x: 0.0, y: 0.0, z: 0.0, w: $(arg orientation_w)}}'"/>
+    args="pub $(arg topic_name) geometry_msgs/Twist 
+    '{linear: {x: $(arg position_x), y: $(arg position_y), z: $(arg position_z)},
+    angular: {x: $(arg euler_x), y: $(arg euler_y), z: $(arg euler_z)}}'"/>
 
 </launch>
 
-<!-- '{pose: {position: {x:0.1, y:0.7, z:0.6}}}'-->
+<!-- '{position: {x:0.144, y:0.511, z:1.0}. euler: {x:-2.2, y: -0.09, z: -0.12}}'-->

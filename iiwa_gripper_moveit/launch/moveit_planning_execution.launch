@@ -39,17 +39,17 @@
     <group ns="$(arg robot_name)" unless="$(arg sim)">
         
         <!-- Load controllers accordingly to parameters -->
-        <include file="$(find iiwa_control)/launch/iiwa_control.launch">
+        <!-- <include file="$(find iiwa_control)/launch/iiwa_control.launch">
             <arg name="hardware_interface" value="$(arg hardware_interface)" />
             <arg name="controllers" value="joint_state_controller $(arg hardware_interface)_trajectory_controller" />
             <arg name="robot_name" value="$(arg robot_name)" />
             <arg name="model" value="$(arg model)" />
-        </include>
+        </include> -->
         
         <!-- Robot interface -->
-        <include file="$(find iiwa_hw)/launch/iiwa_hw.launch" >
+        <!-- <include file="$(find iiwa_hw)/launch/iiwa_hw.launch" >
             <arg name="hardware_interface" value="$(arg hardware_interface)" />
-        </include>
+        </include> -->
         
     </group>
     
