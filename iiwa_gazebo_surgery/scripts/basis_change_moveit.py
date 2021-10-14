@@ -134,6 +134,7 @@ if __name__ == "__main__":
     group = moveit_commander.MoveGroupCommander(group_name)
 
     group.set_planning_time(30)
-    #group.set_planner_id("KPIECE")
+    # group.set_planner_id("KPIECE")
+    group.set_planner_id("RRTstarkConfigDefault")
 
     rospy.spin()

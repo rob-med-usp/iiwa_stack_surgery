@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="tool_example">
+    <static>false</static>
+    <link name="tool">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://tool_example/meshes/tool.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://tool_example/meshes/tool.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
