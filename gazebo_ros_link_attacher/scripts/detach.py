@@ -14,8 +14,8 @@ if __name__ == '__main__':
 
     rospy.loginfo("Detaching tool and modulo")
     req = AttachRequest()
-    req.model_name_1 = "modulo"
-    req.link_name_1 = "link"
+    req.model_name_1 = "iiwa"
+    req.link_name_1 = "suporte"
     req.model_name_2 = "tool_example"
     req.link_name_2 = "tool"
 

@@ -23,17 +23,22 @@
   <!--     <link name="world"/> -->
   
   <link name="world">
+    <inertial>
+      <origin xyz="0.385 0.5 0.3" rpy="0 0 0"/>
+      <mass value="100"/>
+      <inertia ixx="11.33"  ixy="0"  ixz="0" iyy="13.27" iyz="0" izz="7.94" />
+    </inertial>
     <visual>
       <origin xyz="0.4 0 0" rpy="-1.57 0 0"/>
       <geometry>
         <!--box size="0.77 1.0 0.6"/-->
-	      <mesh filename="package://iiwa_gripper_description/meshes/collision/suporte.stl"/>
+	      <mesh filename="package://iiwa_surgery_description/meshes/collision/suporte.stl"/>
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0.37 0 0.499" rpy="-1.57 0 0"/>
+      <origin xyz="0.40 0 0.499" rpy="-1.57 0 0"/>
       <geometry>
-        <box size="0.77 1.0 0.6"/>
+        <box size="0.75 1.0 0.6"/>
 	      <!--mesh filename="package://iiwa_gripper_description/meshes/collision/suporte.stl"/-->
       </geometry>
     </collision>

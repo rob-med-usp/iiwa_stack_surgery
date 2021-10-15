@@ -50,12 +50,12 @@
 			<name>patient</name>
 		</include> -->
 
-		<!-- suporte para o robo -->
-		<include>
+		<!-- suporte para o robo - comentado pois foi inserido no xacro do robô -->
+		<!-- <include>
 			<pose>0.4 0 0 -1.57 0 0</pose>
 			<uri>model://modulo</uri>
 			<name>modulo</name>
-		</include>
+		</include> -->
 		<!-- rosrun gazebo_ros spawn_model -file /home/lincoln/iiwa_stack_ws/src/iiwa_stack_surgery/operating_room/models/modulo/model.sdf -sdf -model modulo -y -0.0 -x 0.4 -z 0 -R -1.57 -P 0.0 -Y 0.0 -->
 
 		<!-- manequins em volta da maca-->

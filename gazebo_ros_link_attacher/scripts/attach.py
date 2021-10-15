@@ -20,19 +20,19 @@ if __name__ == '__main__':
     # req.model_name_2 = "cube2"
     # req.link_name_2 = "link"
 
-    # rospy.loginfo("Attaching modulo and tool")
-    # req = AttachRequest()
-    # req.model_name_1 = "modulo"
-    # req.link_name_1 = "link"
-    # req.model_name_2 = "tool_example"
-    # req.link_name_2 = "tool"
-
-    rospy.loginfo("Attaching iiwa link 7 and tool")
+    rospy.loginfo("Attaching modulo and tool")
     req = AttachRequest()
     req.model_name_1 = "iiwa"
-    req.link_name_1 = "iiwa_link_7"
+    req.link_name_1 = "suporte"
     req.model_name_2 = "tool_example"
     req.link_name_2 = "tool"
+
+    # rospy.loginfo("Attaching iiwa link 7 and tool")
+    # req = AttachRequest()
+    # req.model_name_1 = "iiwa"
+    # req.link_name_1 = "iiwa_link_7"
+    # req.model_name_2 = "tool_example"
+    # req.link_name_2 = "tool"
 
     attach_srv.call(req)
     # From the shell:

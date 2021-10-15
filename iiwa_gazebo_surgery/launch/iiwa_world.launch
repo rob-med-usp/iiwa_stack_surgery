@@ -20,6 +20,7 @@
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
         <!-- The .world is coming from the operating_room package -->
         <arg name="world_name" value="$(find operating_room)/world/operating_world.world"/>
+        <!-- <arg name="world_name" value="$(find iiwa_gazebo)/worlds/iiwa.world"/> -->
         <arg name="debug" value="$(arg debug)" />
         <arg name="gui" value="$(arg gui)" />
         <arg name="paused" value="$(arg paused)"/>
@@ -29,7 +30,7 @@
     
     <!-- Load the URDF with the given hardware interface into the ROS Parameter Server -->
     <!--include file="$(eval find('iiwa_' + arg(tool) + '_description'))/launch/$(arg model)_$(arg tool)_upload.launch"-->
-    <include file="$(find iiwa_description)/launch/$(arg model)_upload.launch">
+    <include file="$(find iiwa_surgery_description)/launch/$(arg model)_surgery_upload.launch">
         <arg name="hardware_interface" value="$(arg hardware_interface)"/>
         <arg name="robot_name" value="$(arg robot_name)" />
         <arg name="origin_xyz" value="'0.2 0 1.0'" /> <!--setting base position-->

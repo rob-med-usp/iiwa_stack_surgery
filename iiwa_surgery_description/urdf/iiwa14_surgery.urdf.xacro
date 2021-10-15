@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<robot name="iiwa14" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- Import Rviz colors -->
+  <xacro:include filename="$(find iiwa_description)/urdf/materials.xacro" />
+  <!--Import the lbr iiwa macro -->
+  <xacro:include filename="$(find iiwa_description)/urdf/iiwa14.xacro"/>
+  
+  <xacro:arg name="hardware_interface" default="PositionJointInterface"/>
+  <xacro:arg name="robot_name" default="iiwa"/>
+  <xacro:arg name="origin_xyz" default="0 0 0"/>
+  <xacro:arg name="origin_rpy" default="0 0 0"/>
+  
+  <!-- Fix to world just for testing -->
+  <!-- <link name="world"/> -->
+
+  <link name="suporte">
+    <inertial>
+      <origin xyz="0.385 0 0.3" rpy="0 0 0"/>
+      <mass value="100"/>
+      <inertia ixx="11.33"  ixy="0"  ixz="0" iyy="7.94" iyz="0" izz="13.27" />
+    </inertial>
+    <visual>
+      <origin xyz="0.4 0 0" rpy="-1.57 0 0"/>
+      <geometry>
+        <!--box size="0.77 1.0 0.6"/-->
+	      <mesh filename="package://iiwa_surgery_description/meshes/collision/suporte.stl"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.40 0 0.499" rpy="-1.57 0 0"/>
+      <geometry>
+        <box size="0.75 1.0 0.6"/>
+	      <!--mesh filename="package://iiwa_gripper_description/meshes/collision/suporte.stl"/-->
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="suporte">
+    <!-- <static>true</static> -->
+    <static>false</static>
+  </gazebo>
+  
+  <!--iiwa-->
+  <xacro:iiwa14 hardware_interface="$(arg hardware_interface)" robot_name="$(arg robot_name)" parent="suporte">
+    <origin xyz="$(arg origin_xyz)" rpy="$(arg origin_rpy)" />
+  </xacro:iiwa14>
+  
+</robot>
