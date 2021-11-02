@@ -15,10 +15,12 @@ if __name__ == '__main__':
     rospy.loginfo("Detaching tool and modulo")
     req = AttachRequest()
     req.model_name_1 = "iiwa"
-    req.link_name_1 = "suporte"
+    req.link_name_1 = "link_suporte"
     req.model_name_2 = "tool_example"
     req.link_name_2 = "tool"
 
+    # rospy.loginfo("Detaching tool and iiwa")
+    # req = AttachRequest()
     # req.model_name_1 = "iiwa"
     # req.link_name_1 = "iiwa_link_7"
     # req.model_name_2 = "tool_example"

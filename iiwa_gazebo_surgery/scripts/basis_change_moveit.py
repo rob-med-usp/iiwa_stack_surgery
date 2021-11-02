@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
 import time
+import subprocess
+import os
 from math import pi
 import rospy
 import sys
@@ -8,6 +10,7 @@ import copy
 import moveit_commander
 import moveit_msgs.msg
 import geometry_msgs.msg
+from rospy.timer import sleep
 from tf.transformations import quaternion_from_euler
 
 
@@ -55,7 +58,8 @@ def add_objects():
     ## Add "head" (a sphere so far)
     print "started adding head"
     head_pose = geometry_msgs.msg.PoseStamped()
-    head_pose.header.frame_id = "world"
+    # head_pose.header.frame_id = "world"
+    head_pose.header.frame_id = "link_suporte"
     head_pose.pose.position.x = 0.2
     head_pose.pose.position.y = 0.8
     head_pose.pose.position.z = 0.83
@@ -67,7 +71,8 @@ def add_objects():
     ## Add the operating table
     print "started adding operating table"
     operating_table_pose = geometry_msgs.msg.PoseStamped()
-    operating_table_pose.header.frame_id = "world"
+    # operating_table_pose.header.frame_id = "world"
+    operating_table_pose.header.frame_id = "link_suporte"
     operating_table_pose.pose.position.x = -0.1
     operating_table_pose.pose.position.y = 0.4
     operating_table_pose.pose.position.z = 0
@@ -95,15 +100,25 @@ def object_in_scene(name="", timeout=2):
             return True
 
         # Sleep so that we give other threads time on the processor
-        rospy.sleep(0.1)
+        rospy.sleep(0.2)
         seconds = rospy.get_time()
 
     # If we exited the while loop without returning then we timed out
-    print "head not included in the scene"
+    print name, " not included in the scene"
     return False
 
 
 if __name__ == "__main__":
+    ## Initialize moveit and wait 15 sconds
+    process = subprocess.Popen(['roslaunch', 'iiwa_gripper_moveit', 'moveit_planning_execution_surgery.launch'], stdout=subprocess.PIPE, universal_newlines=True) 
+
+    while True:
+        output = process.stdout.readline()
+        print(output.strip())
+        rospy.sleep(0.1)
+        if "You can start planning now" in output.strip():
+            break
+    
     ## First initialize `moveit_commander`_ and a `rospy`_ node:
     moveit_commander.roscpp_initialize(sys.argv)
     rospy.init_node('change_of_basis_moveit', anonymous=True)
@@ -124,17 +139,18 @@ if __name__ == "__main__":
     scene = moveit_commander.PlanningSceneInterface(synchronous=True)
 
     # Add static objects to the scene
-    # add_objects()
+    add_objects()
     # scene.remove_world_object("head")
     # scene.remove_world_object("operating_table")
 
     ## Instantiate a `MoveGroupCommander`_ object.  This object is an interface
-    ## to one group of joints. 
-    group_name = "manipulator"
+    ## to one group of joints.
+    group_name = "manipulator" 
+    # group_name = "iiwa_surgery"
     group = moveit_commander.MoveGroupCommander(group_name)
 
-    group.set_planning_time(30)
+    group.set_planning_time(5)
     # group.set_planner_id("KPIECE")
-    group.set_planner_id("RRTstarkConfigDefault")
+    # group.set_planner_id("RRTstarkConfigDefault")
 
     rospy.spin()

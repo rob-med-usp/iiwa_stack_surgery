@@ -33,7 +33,7 @@
     <include file="$(find iiwa_surgery_description)/launch/$(arg model)_surgery_upload.launch">
         <arg name="hardware_interface" value="$(arg hardware_interface)"/>
         <arg name="robot_name" value="$(arg robot_name)" />
-        <arg name="origin_xyz" value="'0.2 0 1.0'" /> <!--setting base position-->
+        <arg name="origin_xyz" value="'0.2 0 0.971'" /> <!--setting base position-->
         <arg name="origin_rpy" value="'0 0 0'" />
     </include>
     

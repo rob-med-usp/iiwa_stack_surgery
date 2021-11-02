@@ -11,7 +11,7 @@
   <!--  Arguments for the iiwa14 macro  -->
   <xacro:arg name="hardware_interface" default="PositionJointInterface"/>
   <xacro:arg name="robot_name" default="iiwa"/>
-  <xacro:arg name="origin_xyz" default="0.2 0 1.0"/>
+  <xacro:arg name="origin_xyz" default="0.2 0 0.97"/>
   <xacro:arg name="origin_rpy" default="0 0 0"/>
   
   <!--  Define the origin of your 3D space
@@ -22,11 +22,11 @@
   
   <!--     <link name="world"/> -->
   
-  <link name="world">
+  <link name="suporte">
     <inertial>
-      <origin xyz="0.385 0.5 0.3" rpy="0 0 0"/>
+      <origin xyz="0.385 0 0.3" rpy="0 0 0"/>
       <mass value="100"/>
-      <inertia ixx="11.33"  ixy="0"  ixz="0" iyy="13.27" iyz="0" izz="7.94" />
+      <inertia ixx="11.33"  ixy="0"  ixz="0" iyy="7.94" iyz="0" izz="13.27" />
     </inertial>
     <visual>
       <origin xyz="0.4 0 0" rpy="-1.57 0 0"/>
@@ -36,20 +36,48 @@
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0.40 0 0.499" rpy="-1.57 0 0"/>
+      <origin xyz="0.40 0 0.49" rpy="0 0 0"/>
       <geometry>
-        <box size="0.75 1.0 0.6"/>
+        <box size="0.75 0.6 0.98"/>
 	      <!--mesh filename="package://iiwa_gripper_description/meshes/collision/suporte.stl"/-->
+      </geometry>
+    </collision>
+    <!-- adding more boxes to improve the collision element -->
+    <collision>
+      <origin xyz="0.285 0.255 1.0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.285 0.056 0.06"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.285 -0.257 1.0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.285 0.056 0.06"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.595 0 1.01" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.34 0.59 0.09"/>
       </geometry>
     </collision>
   </link>
   
-  <gazebo reference="world">
-    <static>true</static>
+  <link name="link_suporte">
+   </link>
+
+  <joint name="suporte_joint" type="fixed">
+     <parent link="link_suporte"/>
+     <child link="suporte"/>
+   </joint>
+
+  <gazebo reference="link_suporte">
+    <!-- <static>true</static> -->
+    <static>false</static>
   </gazebo>
   
   <!-- Here we insert an iiwa14 robot in the scene, it's origin is just on top of the box previously defined. You can use 0,0,0 if you don't have that. -->
-  <xacro:iiwa14 hardware_interface="$(arg hardware_interface)" robot_name="$(arg robot_name)" parent="world">
+  <xacro:iiwa14 hardware_interface="$(arg hardware_interface)" robot_name="$(arg robot_name)" parent="suporte">
     <origin xyz="$(arg origin_xyz)" rpy="$(arg origin_rpy)" />
   </xacro:iiwa14>
   

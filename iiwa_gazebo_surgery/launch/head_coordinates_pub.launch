@@ -1,10 +1,13 @@
 <?xml version="1.0"?>
 <launch>
     <arg name="topic_name" default="/HeadCoordinates"/>
-    <arg name="position_x" default="0.6"/>
-    <arg name="position_y" default="-0.4"/>
-    <arg name="position_z" default="1.3"/>
-    <arg name="euler_x" default="-3.14"/>
+    <arg name="position_x" default="0.2"/>
+    <arg name="position_y" default="0.65"/>
+    <arg name="position_z" default="0.85"/>
+    <!-- z e y da ferramenta exemplo -->
+    <!-- <arg name="position_y" default="-0.403"/>
+    <arg name="position_z" default="1.325"/>  -->
+    <arg name="euler_x" default="-2.34"/>
     <arg name="euler_y" default="0"/>
     <arg name="euler_z" default="0"/>
     <!--node pkg="rostopic" type="rostopic" name="head_coord_node" output="screen" 

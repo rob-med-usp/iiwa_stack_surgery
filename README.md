@@ -11,8 +11,14 @@ In brief, here is contained :
 - **gazebo_ros_link_attacher**: world plugin and example python codes for attaching and detaching links from different models. Used to attach and detach tools to the robot.
 
 
-### Moveit
+### Moveit - GUI
 ```
 roslaunch iiwa_gazebo_surgery iiwa_gazebo_with_sunrise.launch
 roslaunch iiwa_gripper_moveit moveit_planning_execution.launch
+```
+
+### Moveit - ROS node
+```
+roslaunch iiwa_gazebo_surgery iiwa_gazebo_with_sunrise.launch
+roslaunch iiwa_gazebo_surgery basis_change_moveit.launch
 ```
