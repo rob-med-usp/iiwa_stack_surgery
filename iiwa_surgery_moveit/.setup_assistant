@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: iiwa_surgery_description
+    relative_path: urdf/iiwa14_surgery.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/iiwa14.srdf
+  CONFIG:
+    author_name: Lincoln Boer
+    author_email: lincoln.boer@usp.br
+    generated_timestamp: 1634927895

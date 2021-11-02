@@ -1,14 +1,25 @@
 <?xml version="1.0"?>
 <launch>
     <arg name="topic_name" default="/HeadCoordinates"/>
-    <arg name="position_x" default="-0.5"/>
-    <arg name="position_y" default="0.3"/>
-    <arg name="position_z" default="0.2"/>
-    <arg name="orientation_w" default="1.0"/>
-    <node pkg="rostopic" type="rostopic" name="head_coord_node" output="screen" 
+    <arg name="position_x" default="0.2"/>
+    <arg name="position_y" default="0.65"/>
+    <arg name="position_z" default="0.85"/>
+    <!-- z e y da ferramenta exemplo -->
+    <!-- <arg name="position_y" default="-0.403"/>
+    <arg name="position_z" default="1.325"/>  -->
+    <arg name="euler_x" default="-2.34"/>
+    <arg name="euler_y" default="0"/>
+    <arg name="euler_z" default="0"/>
+    <!--node pkg="rostopic" type="rostopic" name="head_coord_node" output="screen" 
     args="pub $(arg topic_name) geometry_msgs/PoseStamped 
     '{header: {stamp: now, frame_id: ''}, 
-    pose: {position: {x: $(arg position_x), y: $(arg position_y), z: $(arg position_z)}, orientation: {x: -1.57, y: -1.57, w: $(arg orientation_w)}}}'"/>
+    pose: {position: {x: $(arg position_x), y: $(arg position_y), z: $(arg position_z)},
+    orientation: {x: -1.57, y: -1.57, w: $(arg orientation_w)}}}'"/-->
+    <node pkg="rostopic" type="rostopic" name="head_coord_node" output="screen" 
+    args="pub $(arg topic_name) geometry_msgs/Twist 
+    '{linear: {x: $(arg position_x), y: $(arg position_y), z: $(arg position_z)},
+    angular: {x: $(arg euler_x), y: $(arg euler_y), z: $(arg euler_z)}}'"/>
+
 </launch>
 
-<!-- '{pose: {position: {x:0.1, y:0.7, z:0.6}}}'-->
+<!-- '{position: {x:0.144, y:0.511, z:1.0}. euler: {x:-2.2, y: -0.09, z: -0.12}}'-->

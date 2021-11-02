@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="operating_head">
+    <static>true</static>
+    <link name="head">
+      <pose>0.2 0.8 0.83 0 0 0</pose>
+      <collision name="collision_head">
+        <geometry>
+          <sphere>
+            <radius>0.09</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual_head">
+        <geometry>
+          <sphere>
+            <radius>0.09</radius>
+          </sphere>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

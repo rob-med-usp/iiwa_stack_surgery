@@ -2,6 +2,9 @@
 
 <sdf version="1.5">
 	<world name="default">
+		<!-- A gazebo links attacher -->
+    	<plugin name="ros_link_attacher_plugin" filename="libgazebo_ros_link_attacher.so"/>
+    
 		<!-- A global light source -->
 		<!--include>
 			<uri>model://sun</uri>
@@ -27,19 +30,33 @@
 			<uri>model://Walls</uri>
 		</include>
 
-        <!-- maca com uma esfera -->
+        <!-- maca -->
 		<include>
-			<pose>-0.1 0.5 0 1.57 0 1.57</pose>
+			<pose>-0.1 0.4 0 1.57 0 1.57</pose>
 			<uri>model://operating_table</uri>
 			<name>operating_table</name>
 		</include>
 
-		<!-- suporte para o robo -->
+		<!-- cabeça (esfera) em cima da maca -->
 		<include>
+			<uri>model://head</uri>
+			<name>head</name>
+		</include>
+
+		<!-- manequim deitado -->
+		<!-- <include>
+			<pose>0.43 1.78 0.73 0 0 3.14</pose>
+			<uri>model://patient</uri>
+			<name>patient</name>
+		</include> -->
+
+		<!-- suporte para o robo - comentado pois foi inserido no xacro do robô -->
+		<!-- <include>
 			<pose>0.4 0 0 -1.57 0 0</pose>
 			<uri>model://modulo</uri>
 			<name>modulo</name>
-		</include>
+		</include> -->
+		<!-- rosrun gazebo_ros spawn_model -file /home/lincoln/iiwa_stack_ws/src/iiwa_stack_surgery/operating_room/models/modulo/model.sdf -sdf -model modulo -y -0.0 -x 0.4 -z 0 -R -1.57 -P 0.0 -Y 0.0 -->
 
 		<!-- manequins em volta da maca-->
 		<include>
@@ -52,6 +69,14 @@
 			<pose>-1.5 1.5 0 0 0 0</pose>
 			<uri>model://maq_anestesia</uri>
 			<name>maq_anestesia</name>
+		</include>
+
+		<!-- Example tool -->
+		<include>
+			<!-- <pose>0.2 0 2.32 0 0 0</pose> -->
+			<pose>0.6 -0.4 1 -3.14 0 0</pose>
+			<uri>model://tool_example</uri>
+			<name>tool_example</name>
 		</include>
         
 	</world>

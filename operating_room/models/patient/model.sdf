@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="patient">
+    <static>true</static>
+    <link name="patient_body">
+      <collision name="collision_patient">
+        <geometry>
+          <mesh>
+            <uri>model://patient/meshes/manequim_1_55.stl</uri>
+            <scale>0.0008 0.0008 0.0008</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual_patient">
+        <geometry>
+          <mesh>
+            <uri>model://patient/meshes/manequim_1_55.stl</uri>
+            <scale>0.0008 0.0008 0.0008</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
