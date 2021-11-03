@@ -139,7 +139,7 @@ if __name__ == "__main__":
     scene = moveit_commander.PlanningSceneInterface(synchronous=True)
 
     # Add static objects to the scene
-    add_objects()
+    # add_objects()
     # scene.remove_world_object("head")
     # scene.remove_world_object("operating_table")
 

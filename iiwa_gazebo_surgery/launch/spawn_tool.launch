@@ -3,7 +3,7 @@
 
   <!--include file="$(find iiwa_gazebo_surgery)/scripts/planning_execution.py">
   </include-->
-  <node pkg="iiwa_gazebo_surgery" name="basis_change_moveit"
-        type="basis_change_moveit.py" output="screen" ns="iiwa">
+  <node pkg="iiwa_gazebo_surgery" name="spawn_tool"
+        type="spawn_tool.py" output="screen" ns="iiwa">
   </node>
 </launch>
