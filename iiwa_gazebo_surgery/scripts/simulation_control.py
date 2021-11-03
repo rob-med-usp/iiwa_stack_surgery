@@ -109,8 +109,8 @@ def object_in_scene(name="", timeout=2):
 
 
 if __name__ == "__main__":
-    ## Initialize moveit and wait 15 sconds
-    process = subprocess.Popen(['roslaunch', 'iiwa_gripper_moveit', 'moveit_planning_execution_surgery.launch'], stdout=subprocess.PIPE, universal_newlines=True) 
+    ## Initialize moveit
+    process = subprocess.Popen(['roslaunch', 'iiwa_surgery_moveit', 'moveit_planning_execution_surgery.launch'], stdout=subprocess.PIPE, universal_newlines=True) 
 
     while True:
         output = process.stdout.readline()
@@ -119,7 +119,7 @@ if __name__ == "__main__":
         if "You can start planning now" in output.strip():
             break
     
-    ## First initialize `moveit_commander`_ and a `rospy`_ node:
+    ## Initialize `moveit_commander`_ and a `rospy`_ node:
     moveit_commander.roscpp_initialize(sys.argv)
     rospy.init_node('change_of_basis_moveit', anonymous=True)
     
@@ -144,12 +144,11 @@ if __name__ == "__main__":
     # scene.remove_world_object("operating_table")
 
     ## Instantiate a `MoveGroupCommander`_ object.  This object is an interface
-    ## to one group of joints.
-    group_name = "manipulator" 
-    # group_name = "iiwa_surgery"
+    ## to one group of joints. 
+    group_name = "iiwa_surgery"
     group = moveit_commander.MoveGroupCommander(group_name)
 
-    group.set_planning_time(5)
+    # group.set_planning_time(5)
     # group.set_planner_id("KPIECE")
     # group.set_planner_id("RRTstarkConfigDefault")
 

@@ -5,8 +5,6 @@ Packages on how to extend [**iiwa_stack**](https://github.com/SalvoVirga/iiwa_st
 
 In brief, here is contained :
 - **iiwa_gazebo_surgery**: some modified files from iiwa_stack and scripts to communicate both with the simulation and moveit
-- **iiwa_gripper_description** : description of the robot on the support and with a gripper attached to its flange - the configuration is done as the gripper did not move, the goal is just to take its dimensions into consideration when planning trajectory
-- **iiwa_gripper_moveit** : moveit package to control the robot with the gripper using moveit
 - **iiwa_surgery_description** : description of the robot on the support without any tools
 - **iiwa_surgery_moveit** : moveit package to control the robot using moveit
 - **operating_room** : definition of the static objects and their properties within the scene where the robot will be

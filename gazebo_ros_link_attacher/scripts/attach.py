@@ -31,8 +31,8 @@ if __name__ == '__main__':
     req = AttachRequest()
     req.model_name_1 = "iiwa"
     req.link_name_1 = "iiwa_link_7"
-    req.model_name_2 = "tool_example"
-    req.link_name_2 = "tool"
+    req.model_name_2 = "drill"
+    req.link_name_2 = "drill_link"
 
     attach_srv.call(req)
     # From the shell:

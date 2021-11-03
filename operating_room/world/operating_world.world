@@ -71,13 +71,30 @@
 			<name>maq_anestesia</name>
 		</include>
 
-		<!-- Example tool -->
-		<include>
-			<!-- <pose>0.2 0 2.32 0 0 0</pose> -->
+		<!-- Inserting tools just for initial visualization -->
+		<!-- <include>
 			<pose>0.6 -0.4 1 -3.14 0 0</pose>
 			<uri>model://tool_example</uri>
 			<name>tool_example</name>
 		</include>
+
+		<include>
+			<pose>0.6 -0.4 1 -3.14 0 0</pose>
+			<uri>model://drill</uri>
+			<name>drill</name>
+		</include>
+
+		<include>
+			<pose>0.45 -0.4 1 -3.14 0 0</pose>
+			<uri>model://pen_support</uri>
+			<name>pen_support</name>
+		</include>
+
+		<include>
+			<pose>0.1 -0.4 1 -3.14 0 0</pose>
+			<uri>model://tms</uri>
+			<name>tms</name>
+		</include> -->
         
 	</world>
 </sdf>
