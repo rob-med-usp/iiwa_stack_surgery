@@ -7,7 +7,7 @@ generic_hw_control_loop:
   loop_hz: 300
   cycle_time_error_threshold: 0.01
 # Settings for ros_control hardware interface
-hardware_interface:
+hardware_interface: 
   joints:
     - iiwa_joint_1
     - iiwa_joint_2

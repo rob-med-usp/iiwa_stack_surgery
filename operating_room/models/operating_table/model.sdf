@@ -4,35 +4,26 @@
     <static>true</static>
     <link name="table">
       <inertial>
-        <!--pose>0 0 -0.58 0 0 0</pose-->
         <mass>40</mass>
       </inertial>
+      
       <collision name="collision_table">
         <geometry>
           <box>
-            <size>2.0 0.735 0.62</size>
+            <size>2.0 0.735 0.66</size>
           </box>
-          <!--mesh>
-            <uri>model://operating_table/meshes/medical_operating_table.stl</uri>
-            <scale>0.01 0.01 0.01</scale>
-          </mesh-->
         </geometry>
-        <pose>1.0 0.3675 0.31 0 0 0</pose>
-        <surface>
-        </surface>
+        <pose>0 0 0.33 0 0 0</pose>
       </collision>
+
       <visual name="visual_table">
         <geometry>
           <mesh>
-            <uri>model://operating_table/meshes/medical_operating_table.stl</uri>
-            <scale>0.001 0.001 0.001</scale>
+            <uri>model://operating_table/meshes/operating_table.dae</uri>
           </mesh>
         </geometry>
-        <material>
-          <script>
-          </script>
-        </material>
       </visual>
     </link>
   </model>
 </sdf>
+

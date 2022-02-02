@@ -14,7 +14,7 @@
     <arg name="model" default="iiwa14"/>
     
     <arg name="pi" default="3.141592"/>
-    <arg name="initial_angle_6" default="$(eval 90*arg('pi')/180)"/> <!--Initial angle in radians -->
+    <arg name="initial_angle_6" default="$(eval 0*arg('pi')/180)"/> <!--Initial angle in radians -->
 
     <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
     <include file="$(find gazebo_ros)/launch/empty_world.launch">

@@ -8,16 +8,18 @@
         <mass>1.0</mass>
       </inertial>
       <collision name="collision">
+        <pose>0 0 0 0 0 1.57</pose>
         <geometry>
           <mesh>
-            <uri>model://drill/meshes/drill.stl</uri>
+            <uri>model://drill/meshes/drill.dae</uri>
           </mesh>
         </geometry>
       </collision>
       <visual name="visual">
+        <pose>0 0 0 0 0 1.57</pose>
         <geometry>
           <mesh>
-            <uri>model://drill/meshes/drill.stl</uri>
+            <uri>model://drill/meshes/drill.dae</uri>
           </mesh>
         </geometry>
       </visual>

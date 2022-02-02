@@ -17,9 +17,9 @@ from tf.transformations import quaternion_from_euler
 def go_to_pose(head_basis):
     
     world_basis = geometry_msgs.msg.Pose()    
-    world_basis.position.x = head_basis.linear.x
+    world_basis.position.x = head_basis.linear.x + 0.2
     world_basis.position.y = head_basis.linear.y
-    world_basis.position.z = head_basis.linear.z
+    world_basis.position.z = head_basis.linear.z + 0.97
 
     # Pose Orientation
     roll_angle = head_basis.angular.x
@@ -123,9 +123,8 @@ if __name__ == "__main__":
     moveit_commander.roscpp_initialize(sys.argv)
     rospy.init_node('change_of_basis_moveit', anonymous=True)
     
-    display_trajectory_publisher = rospy.Publisher('/iiwa/move_group/display_planned_path',
-                                                    moveit_msgs.msg.DisplayTrajectory,
-                                                    queue_size=20)
+    display_trajectory_publisher = rospy.Publisher('/iiwa/move_group/display_planned_path', moveit_msgs.msg.DisplayTrajectory, queue_size=20)
+    
     ## Subscriber that receives head coordinates and call a function to compute
     ## the basis change and execute it of ok
     pose_sub = rospy.Subscriber('/HeadCoordinates', geometry_msgs.msg.Twist, go_to_pose)

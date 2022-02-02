@@ -24,6 +24,6 @@
     <param name="hardware_interface" value="$(arg hardware_interface)"/>
     <param name="robot_name" value="$(arg robot_name)"/>
     <param name="model" value="$(arg model)"/>
-    <param name="tool_length" value="0.2"/> <!-- Ver se isso está surtindo efeito -->
+    <param name="tool_length" value="0.0"/>
   </include>
 </launch>

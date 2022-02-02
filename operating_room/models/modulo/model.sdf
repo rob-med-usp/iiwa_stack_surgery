@@ -18,7 +18,7 @@
       <visual name="visual">
         <geometry>
           <mesh>
-            <uri>model://modulo/meshes/suporte.stl</uri>
+            <uri>model://modulo/meshes/suporte.dae</uri>
             <!--scale>0.1 0.1 0.1</scale-->
           </mesh>
         </geometry>

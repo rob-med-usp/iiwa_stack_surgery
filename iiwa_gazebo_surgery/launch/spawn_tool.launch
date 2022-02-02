@@ -2,8 +2,8 @@
 <launch>
 
   <!--include file="$(find iiwa_gazebo_surgery)/scripts/planning_execution.py">
-  </include-->
+  </include ns="iiwa"-->
   <node pkg="iiwa_gazebo_surgery" name="spawn_tool"
-        type="spawn_tool.py" output="screen" ns="iiwa">
+        type="spawn_tool.py" output="screen">
   </node>
 </launch>
