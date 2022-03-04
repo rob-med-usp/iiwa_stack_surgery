@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="iiwa_gazebo_surgery" name="surgery_moveit"
+        type="surgery_moveit.py" output="screen" ns="iiwa">
+  </node>
+</launch>

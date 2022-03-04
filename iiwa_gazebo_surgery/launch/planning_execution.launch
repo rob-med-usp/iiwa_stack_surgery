@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-
-  <!--include file="$(find iiwa_gazebo_surgery)/scripts/planning_execution.py">
-  </include-->
-  <node pkg="iiwa_gazebo_surgery" name="planning_execution"
-        type="planning_execution.py" output="screen" ns="iiwa">
-  </node>
-</launch>

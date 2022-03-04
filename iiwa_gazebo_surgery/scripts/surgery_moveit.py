@@ -16,6 +16,9 @@ from tf.transformations import quaternion_from_euler
 
 def go_to_pose(head_basis):
     
+    # the values added are based on the position of the base of the robot defined in 
+    # .../iiwa_gazebo_surgery/launch/iiwa_world.launch
+    # this assumes the robot does not move. better would be to verify the robots position
     world_basis = geometry_msgs.msg.Pose()    
     world_basis.position.x = head_basis.linear.x + 0.2
     world_basis.position.y = head_basis.linear.y
@@ -34,7 +37,7 @@ def go_to_pose(head_basis):
 
     print "Pose and orientetion sent \n", world_basis
 
-
+    group.set_start_state_to_current_state()
     group.set_pose_target(world_basis)
 
     ## Now, we call the planner to compute the plan and execute it
@@ -121,7 +124,7 @@ if __name__ == "__main__":
     
     ## Initialize `moveit_commander`_ and a `rospy`_ node:
     moveit_commander.roscpp_initialize(sys.argv)
-    rospy.init_node('change_of_basis_moveit', anonymous=True)
+    rospy.init_node('iiwa_moveit_commander', anonymous=True)
     
     display_trajectory_publisher = rospy.Publisher('/iiwa/move_group/display_planned_path', moveit_msgs.msg.DisplayTrajectory, queue_size=20)
     

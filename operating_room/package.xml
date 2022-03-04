@@ -2,18 +2,18 @@
 <package format="2">
   <name>operating_room</name>
   <version>0.0.0</version>
-  <description>The operating_room package</description>
+  <description>T
+    Package that include models and defines a world for Gazebo based on a surgery room
+  </description>
 
-  <!-- One maintainer tag required, multiple allowed, one person per tag -->
-  <!-- Example:  -->
-  <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-  <maintainer email="lincoln@todo.todo">lincoln</maintainer>
+  <author email="lincolnboer@gmail.com">Lincoln Boer</author>
+  <maintainer email="lincolnboer@gmail.com">Lincoln Boer</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->
   <!-- Commonly used license strings: -->
   <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
-  <license>TODO</license>
+  <license>BSD</license>
 
 
   <!-- Url tags are optional, but multiple are allowed, one per tag -->
@@ -21,11 +21,6 @@
   <!-- Example: -->
   <!-- <url type="website">http://wiki.ros.org/operating_room</url> -->
 
-
-  <!-- Author tags are optional, multiple are allowed, one per tag -->
-  <!-- Authors do not have to be maintainers, but could be -->
-  <!-- Example: -->
-  <!-- <author email="jane.doe@example.com">Jane Doe</author> -->
 
 
   <!-- The *depend tags are used to specify dependencies -->
@@ -54,7 +49,9 @@
 
 
   <!-- The export tag contains other, unspecified, tags -->
+
   <export>
     <gazebo_ros gazebo_model_path="${prefix}/models"/>
   </export>
+  
 </package>

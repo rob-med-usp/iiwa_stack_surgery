@@ -11,14 +11,8 @@ find_package(catkin REQUIRED COMPONENTS
 
 catkin_package()
 
-catkin_install_python(PROGRAMS scripts/planning_execution.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
-
-catkin_install_python(PROGRAMS scripts/simulation_control.py
+catkin_install_python(PROGRAMS scripts/surgery_moveit.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 catkin_install_python(PROGRAMS scripts/spawn_tool.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
-
-catkin_install_python(PROGRAMS scripts/send_coordinates.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})

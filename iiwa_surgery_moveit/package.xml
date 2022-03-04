@@ -3,10 +3,10 @@
   <name>iiwa_surgery_moveit</name>
   <version>0.3.0</version>
   <description>
-     An automatically generated package with all the configuration and launch files for using the iiwa14 with the MoveIt! Motion Planning Framework
+     Configuration and launch files for using the iiwa14 with the MoveIt! Motion Planning Framework
   </description>
-  <author email="lincoln.boer@usp.br">Lincoln Boer</author>
-  <maintainer email="lincoln.boer@usp.br">Lincoln Boer</maintainer>
+  <author email="lincolnboer@gmail.com">Lincoln Boer</author>
+  <maintainer email="lincolnboer@gmail.com">Lincoln Boer</maintainer>
 
   <license>BSD</license>
 

@@ -14,8 +14,7 @@
     <arg name="hardware_interface" default="PositionJointInterface" />
     <arg name="robot_name" default="iiwa" />
     <arg name="model" default="iiwa14"/>
-    <arg name="trajectory" default="false"/>
-    <arg name="tool" default=""/>
+    <arg name="trajectory" default="true"/>
     
     <!-- Loads the Gazebo world. -->
     <include file="$(find iiwa_gazebo_surgery)/launch/iiwa_world.launch">

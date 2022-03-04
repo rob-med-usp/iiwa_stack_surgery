@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <launch>
+    <!-- Coordenadas com relação a origem do robô, o centro da sua base -->
     <arg name="topic_name" default="/HeadCoordinates"/>
     <arg name="position_x" default="0.2"/>
     <arg name="position_y" default="0.65"/>

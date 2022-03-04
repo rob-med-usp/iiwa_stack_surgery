@@ -2,9 +2,9 @@
 <package format="2">
   <name>iiwa_surgery_description</name>
   <version>1.4.0</version>
-  <description>This package contains the URDF of the KUKA LBR IIWA robot</description>
-  <author email="salvo.virga@tum.de">Salvo Virga</author>
-  <maintainer email="salvo.virga@tum.de">Salvo Virga</maintainer>
+  <description>This package contains the URDF of the KUKA LBR IIWA robot attached to a support</description>
+  <author email="lincolnboer@gmail.com">Lincoln Boer</author>
+  <maintainer email="lincolnboer@gmail.com">Lincoln Boer</maintainer>
 
   <license>BSD</license>
 

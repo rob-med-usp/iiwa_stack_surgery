@@ -44,7 +44,8 @@
     </group>
     
     <!-- Load move_group -->
-    <!-- <group ns="$(arg robot_name)"> -->
+    <!-- the previous launch file is lunched under the iiwa namespace, so all this is already under /iiwa -->
+    <!-- <group ns="$(arg robot_name)">  -->
         <include file="$(find iiwa_surgery_moveit)/launch/move_group.launch">
             <arg name="publish_monitored_planning_scene" value="true" />
             <arg name="hardware_interface" value="$(arg hardware_interface)"/>
